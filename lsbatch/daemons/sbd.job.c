@@ -24,6 +24,7 @@
 #include <stdio.h>
 #include <grp.h>
 #include <pwd.h>
+#include <string.h>
 
 #include <malloc.h>
 #include "../../lsf/intlib/jidx.h"
@@ -2249,7 +2250,7 @@ send_results (struct jobCard *jp)
 
 		    temp1 = putstr_( _i18n_msg_get(ls_catd, NL_SETN, 
 			sys_siglist_ID[sig], 
-			(char *)sys_siglist[sig]));
+			strsignal(sig)));
 		    
 		    fprintf(notif, _i18n_msg_get(ls_catd, NL_SETN, 433,
 			"Exited with signal termination: %s"), /* catgets 433 */

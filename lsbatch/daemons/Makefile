@@ -16,8 +16,8 @@ LSBLIB=$(TOP)/lsbatch/lib/liblsfbat.so
 PREFIX=${INSTALL_PREFIX}
 
 LIBS = $(LSBLIB) $(LSFLIB) $(INTLIB)
-LINKLIBS = $(INTLIB) -L $(TOP)/lsf/lib -llsf -L $(TOP)/lsbatch/lib -llsfbat -lm ${BSDLIB} -ldl
-CFLAGS =-I$(TOP) 
+LINKLIBS = $(INTLIB) -L $(TOP)/lsf/lib -llsf -L $(TOP)/lsbatch/lib -llsfbat -lm ${BSDLIB} -ldl -ltirpc
+CFLAGS +=-I$(TOP) 
 
 MOBJ = mbd.main.o mbd.serv.o mbd.job.o mbd.queue.o \
        mbd.log.o misc.o mbd.comm.o daemons.o \

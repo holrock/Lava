@@ -15,8 +15,8 @@ LSFLIB=$(TOP)/lsf/lib/liblsf.so
 LSBLIB=$(TOP)/lsbatch/lib/liblsfbat.so
 
 LIBS =  $(LSBLIB) $(LSFLIB) 
-LINKLIB = -L $(TOP)/lsf/lib -llsf -L $(TOP)/lsbatch/lib -llsfbat $(INTLIB) $(BSDLIB)
-CFLAGS = -I$(TOP)
+LINKLIB = -L $(TOP)/lsf/lib -llsf -L $(TOP)/lsbatch/lib -llsfbat $(INTLIB) $(BSDLIB) -ltirpc
+CFLAGS += -I$(TOP)
 
 PREFIX = ${INSTALL_PREFIX}
 

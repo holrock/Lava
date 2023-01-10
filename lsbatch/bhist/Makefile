@@ -15,7 +15,7 @@ LSBLIB=$(TOP)/lsbatch/lib/liblsfbat.so
 
 LIBS = -L $(TOP)/lsf/lib -llsf -L $(TOP)/lsbatch/lib -llsfbat $(INTLIB) $(BSDLIB) 
 
-CFLAGS = -I$(TOP)
+CFLAGS += -I$(TOP)
 
 OBJS_BHIST = bhist.o read.event.o ../cmd/cmd.job.o \
      ../cmd/cmd.misc.o ../cmd/cmd.jobid.o ../cmd/cmd.prt.o \

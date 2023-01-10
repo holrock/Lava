@@ -6,7 +6,7 @@ include $(TOP)/Make.misc
 
 .SUFFIXES: .o
 
-CFLAGS_ECHKPNT=${EXTERN_CFLAGS}
+CFLAGS_ECHKPNT=${EXTERN_CFLAGS} ${CFLAGS}
 # LSF lib 
 
 LSFLIB=$(TOP)/lsf/lib/liblsf.so

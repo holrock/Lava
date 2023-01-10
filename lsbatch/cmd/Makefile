@@ -18,7 +18,7 @@ LIBS=$(INTLIB) $(LSFLIB) $(LSBLIB)
 
 LINKLIBS = -L $(TOP)/lsf/lib -llsf -L $(TOP)/lsbatch/lib -llsfbat $(INTLIB) -ldl $(BSDLIB)
 
-CFLAGS = -I../.. 
+CFLAGS += -I../.. 
 
 OBJS_BSUB       = bsub.o cmd.sub.o cmd.jobid.o \
 		  cmd.err.o

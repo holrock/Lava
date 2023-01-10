@@ -14,12 +14,12 @@ INTLIB=$(TOP)/lsf/intlib/lsfint.a
 LSFLIB=$(TOP)/lsf/lib/liblsf.so
 
 LIBS = $(INTLIB) $(LSFLIB)
-LINKLIBS = $(INTLIB) -L $(TOP)/lsf/lib -llsf -lm $(BSDLIB) -ldl
+LINKLIBS = $(INTLIB) -L $(TOP)/lsf/lib -llsf -lm $(BSDLIB) -ldl -ltirpc
 PREFIX = ${INSTALL_PREFIX}
 
 NO_SIGALARM = -DNO_SIGALARM
 
-CFLAGS = -D$(HOSTTYPE) -DHOST_TYPE_STRING=\"$(HOSTTYPE)\" $(NO_SIGALARM)
+CFLAGS += -D$(HOSTTYPE) -DHOST_TYPE_STRING=\"$(HOSTTYPE)\" $(NO_SIGALARM)
 
 OBJS = lim.main.o lim.conf.o lim.misc.o lim.load.o \
        lim.rload.o lim.xdr.o lim.internal.o \

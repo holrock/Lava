@@ -16,7 +16,7 @@ LSFLIB=$(TOP)/lsf/lib/liblsf.so
 LIBS =  $(INTLIB) $(LSFLIB) 
 LINKLIBS = -L $(TOP)/lsf/lib -llsf $(BSDLIB)
 
-CFLAGS = -I$(TOP) -I$(TOP)/lsf 
+CFLAGS += -I$(TOP) -I$(TOP)/lsf 
 
 OBJS_LSADMIN = lsadmin.o cmd.limcontrol.o cmd.rescontrol.o \
                startup.o

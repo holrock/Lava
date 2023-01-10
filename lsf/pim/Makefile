@@ -11,7 +11,7 @@ include $(TOP)/Make.misc
 INTLIB=$(TOP)/lsf/intlib/lsfint.a
 LSFLIB=$(TOP)/lsf/lib/liblsf.so
 
-CFLAGS = $(SITE)
+CFLAGS += $(SITE)
 
 LIBS =  $(INTLIB) $(LSFLIB) 
 LINKLIBS = $(INTLIB) -L $(TOP)/lsf/lib -llsf $(BSDLIB) -lm -ldl 
